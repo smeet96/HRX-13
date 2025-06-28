@@ -313,7 +313,7 @@ CN
 </div>
 </div>
 <nav className="ml-10 flex space-x-8">
-<a href="https://readdy.ai/home/c720ef4e-af14-410b-b640-c259f294cc92/83fa1565-b513-4366-a080-fd767d90de95" data-readdy="true" className="text-gray-500 hover:text-gray-700 font-medium px-3 py-2 text-sm">Home</a>
+<a href='/' data-readdy="true" className="text-gray-500 hover:text-gray-700 font-medium px-3 py-2 text-sm">Home</a>
 <a href="#" className="text-indigo-600 font-medium border-b-2 border-indigo-600 px-3 py-2 text-sm">Projects</a>
 <a href="#" className="text-gray-500 hover:text-gray-700 font-medium px-3 py-2 text-sm">My Learning</a>
 <a href="#" className="text-gray-500 hover:text-gray-700 font-medium px-3 py-2 text-sm">Community</a>
