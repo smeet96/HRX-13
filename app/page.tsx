@@ -264,7 +264,7 @@ const App: React.FC = () => {
               <Rocket className="text-white w-5 h-5" />
             </div>
             <h1 className="text-2xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
-              Curious Nova
+              Intelldev
             </h1>
           </div>
           <nav className="hidden md:flex items-center space-x-8">
@@ -275,7 +275,7 @@ const App: React.FC = () => {
               Home
             </a>
             <a
-              href="#"
+              href="/projects"
               className="font-medium text-gray-900 dark:text-gray-100 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors cursor-pointer"
             >
               Projects
@@ -430,6 +430,91 @@ const App: React.FC = () => {
       <main className="container mx-auto px-4 py-8">
         {/* Hero/Input Section */}
         <section className="relative mb-16">
+<div className="absolute inset-0 bg-gradient-to-r from-indigo-100 to-purple-100 rounded-3xl"></div>
+<div
+className="relative rounded-3xl overflow-hidden"
+style={{
+backgroundImage: `url('https://readdy.ai/api/search-image?query=modern%20abstract%20space%20themed%20background%20with%20stars%20and%20nebulas%20in%20purple%20and%20blue%20colors%2C%20gradient%20from%20dark%20blue%20to%20light%20purple%20on%20left%20side%20for%20text%20readability%2C%20cosmic%20exploration%20theme%2C%20high%20quality%20digital%20art&width=1400&height=500&seq=10&orientation=landscape')`,
+backgroundSize: 'cover',
+backgroundPosition: 'center'
+}}
+>
+<div className="flex flex-col md:flex-row items-center p-8 md:p-16">
+<div className="md:w-1/2 text-left mb-8 md:mb-0">
+<h2 className="text-4xl md:text-5xl font-bold text-white mb-4">Transform Learning into Building</h2>
+<p className="text-lg md:text-xl text-indigo-100 mb-6">Generate personalized projects based on what you've just learned. Turn concepts into hands-on experience.</p>
+<div className="bg-white/10 backdrop-blur-md p-6 rounded-xl">
+<div className="relative">
+<Input
+type="text"
+placeholder="Enter a concept, paste lecture notes, or describe what you learned"
+className="w-full pl-4 pr-12 py-4 text-white bg-white/20 border-none focus:ring-2 focus:ring-indigo-500 rounded-xl placeholder:text-indigo-200"
+value={searchQuery}
+onChange={(e) => setSearchQuery(e.target.value)}
+onKeyDown={(e) => e.key === 'Enter' && handleSearch()}
+/>
+<button
+className="absolute right-3 top-1/2 transform -translate-y-1/2 text-white hover:text-indigo-200 transition-colors cursor-pointer"
+onClick={handleSearch}
+>
+{isProcessing ? (
+<i className="fas fa-spinner fa-spin text-xl"></i>
+) : (
+<i className="fas fa-wand-magic-sparkles text-xl"></i>
+)}
+</button>
+</div>
+<div className="mt-4 flex flex-col sm:flex-row gap-6">
+<div className="flex items-center space-x-4">
+<Label className="text-white">Experience:</Label>
+<div className="flex bg-white/10 rounded-full p-1">
+{['Beginner', 'Intermediate', 'Advanced'].map((level) => (
+<button
+key={level}
+onClick={() => setExperienceLevel(level)}
+className={`px-3 py-1 text-sm rounded-full transition-colors whitespace-nowrap ${
+experienceLevel === level
+? 'bg-indigo-600 text-white'
+: 'text-indigo-100 hover:bg-white/10'
+}`}
+>
+{level}
+</button>
+))}
+</div>
+</div>
+<div className="flex items-center space-x-4">
+<Label className="text-white">Time:</Label>
+<div className="flex bg-white/10 rounded-full p-1">
+{['Quick', 'Medium', 'Extended'].map((time) => (
+<button
+key={time}
+onClick={() => setTimeCommitment(time)}
+className={`px-3 py-1 text-sm rounded-full transition-colors whitespace-nowrap ${
+timeCommitment === time
+? 'bg-indigo-600 text-white'
+: 'text-indigo-100 hover:bg-white/10'
+}`}
+>
+{time}
+</button>
+))}
+</div>
+</div>
+</div>
+</div>
+</div>
+<div className="md:w-1/2 flex justify-center">
+<img
+src="https://readdy.ai/api/search-image?query=modern%20illustration%20of%20diverse%20students%20working%20on%20creative%20projects%2C%20space%20themed%20elements%2C%20planets%20and%20stars%2C%20digital%20devices%2C%20futuristic%20educational%20technology%2C%20vibrant%20colors%2C%20high%20quality%20digital%20art%2C%20clean%20background&width=600&height=500&seq=11&orientation=portrait"
+alt="Students exploring creative projects"
+className="max-w-full h-auto rounded-xl shadow-2xl"
+/>
+</div>
+</div>
+</div>
+</section>
+        {/* <section className="relative mb-16">
           <div className="absolute inset-0 bg-gradient-to-r from-indigo-100 to-purple-100 dark:from-indigo-900/20 dark:to-purple-900/20 rounded-3xl"></div>
           <div className="relative rounded-3xl overflow-hidden bg-gradient-to-r from-indigo-600 to-purple-600 dark:from-indigo-700 dark:to-purple-700">
             <div className="flex flex-col md:flex-row items-center p-8 md:p-16">
@@ -505,7 +590,7 @@ const App: React.FC = () => {
               </div>
             </div>
           </div>
-        </section>
+        </section> */}
 
         {/* Project Suggestions Grid */}
         <section className="mb-16">
@@ -974,7 +1059,7 @@ const App: React.FC = () => {
                 <div className="w-8 h-8 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-lg flex items-center justify-center">
                   <Rocket className="text-white w-4 h-4" />
                 </div>
-                <h3 className="text-xl font-bold">Curious Nova</h3>
+                <h3 className="text-xl font-bold"> Intelldev </h3>
               </div>
               <p className="text-gray-400 dark:text-gray-500 mb-4">
                 Transform your learning journey with personalized, hands-on projects that reinforce concepts and build
@@ -1020,7 +1105,7 @@ const App: React.FC = () => {
                 </li>
                 <li>
                   <a
-                    href="#"
+                    href="/project"
                     className="text-gray-400 dark:text-gray-500 hover:text-white dark:hover:text-gray-300 transition-colors cursor-pointer"
                   >
                     Projects

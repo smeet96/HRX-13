@@ -2,6 +2,7 @@
 'use client'
 import React, { useState } from 'react';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 import * as echarts from 'echarts';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Autoplay } from 'swiper/modules';
@@ -28,6 +29,7 @@ import { Slider } from "@/components/ui/slider";
 import { AlertCircle } from "lucide-react";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 const App: React.FC = () => {
+const router = useRouter();
 // State for the multi-step form
 const [currentStep, setCurrentStep] = useState(1);
 const [formData, setFormData] = useState({
